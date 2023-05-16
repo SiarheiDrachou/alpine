@@ -1,0 +1,44 @@
+.project {
+  padding: 9.0625rem 3rem 4.6875rem 2.5rem;
+
+  @media (max-width: 450px) {
+    padding: 4rem 0;
+  }
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 4rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 2rem;
+  margin-bottom: 4rem;
+  
+  @media (max-width: 450px) {
+    font-size: 1.5rem;
+    padding: 0 1.125rem 2rem;
+  }
+}
+
+.description {
+  margin-top: 8.75rem;
+  padding: 8.75rem 4.8125rem 8.5rem 6rem;
+  background-image: url('../../assets/img/description.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-weight: 600;
+  font-size: 96px;
+  color: white;
+  border-radius: 3.125rem;
+  
+  @media (max-width: 450px) {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 2rem 1rem;
+  }
+}

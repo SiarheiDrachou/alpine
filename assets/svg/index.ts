@@ -1,0 +1,6 @@
+export { default as Logo } from './Logo'
+export { default as Menu } from './Menu'
+export { default as CloseIcon } from './CloseIcon'
+export { default as LinkArrow } from './LinkArrow'
+export { default as ArrowRight } from './ArrowRight'
+export { default as Arrow } from './Arrow'

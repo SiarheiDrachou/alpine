@@ -1,0 +1,120 @@
+.list {
+  display: grid;
+  grid-gap: 1.5rem;
+
+  @media (max-width: 450px) {
+    padding: 0 0.625rem;
+  }
+}
+
+.listItem {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 43.3125rem;
+  border-radius: 3.125rem;
+  
+  @media (max-width: 450px) {
+    grid-column-start: 1 !important;
+    grid-column-end: 1 !important;
+  }
+}
+
+.projectType {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  border-radius: 3.125rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #fff;
+}
+
+.card {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44.125rem;
+  height: 19.375rem;
+  background-color: white;
+  border-radius: 2.5rem;
+  padding: 2rem;
+
+  @media (max-width: 450px) {
+    width: 90%;
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.cardType {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  border-radius: 3.125rem;
+  padding: 0.5rem 1.5rem;
+  color: black;
+  border: 1px solid #000000;
+
+  @media (max-width: 450px) {
+    display: none;
+  }
+}
+
+.cardYear {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  border-radius: 3.125rem;
+  padding: 0.5rem 1.5rem;
+  color: black;
+  border: 1px solid #000000;
+
+  @media (max-width: 450px) {
+    display: none;
+  }
+}
+
+.cardDevelop {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  border-radius: 3.125rem;
+  padding: 0.5rem 1.5rem;
+  color: black;
+  background-color: #fff;
+}
+
+.cardTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.5rem;
+  color: black;
+  width: 100%;
+
+  @media (max-width: 450px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.year {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  border-radius: 3.125rem;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  border: 1px solid #fff;
+  background-color: transparent;
+  
+  @media (max-width: 450px) {
+    display: none;
+  }
+}
