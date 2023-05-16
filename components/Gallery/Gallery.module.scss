@@ -2,7 +2,16 @@
   display: grid;
   grid-gap: 1.5rem;
 
-  @media (max-width: 450px) {
+  @media (max-width: 1600px) {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 500px) {
     padding: 0 0.625rem;
   }
 }
@@ -18,7 +27,7 @@
   height: 43.3125rem;
   border-radius: 3.125rem;
   
-  @media (max-width: 450px) {
+  @media (max-width: 1024px) {
     grid-column-start: 1 !important;
     grid-column-end: 1 !important;
   }
@@ -39,14 +48,19 @@
   position: relative;
   bottom: 2rem;
   right: 2rem;
-  width: 44.125rem;
+  width: 100%;
+  max-width: 44.125rem;
   height: 19.375rem;
   background-color: white;
   border-radius: 2.5rem;
   padding: 2rem;
 
-  @media (max-width: 450px) {
-    width: 90%;
+  @media (max-width: 1600px) {
+    width: calc(100% - 4rem);
+    padding: 0.5rem 1rem;
+  }
+
+  @media (max-width: 500px) {
     height: auto;
     padding: 0.5rem 1rem;
   }
@@ -61,7 +75,7 @@
   color: black;
   border: 1px solid #000000;
 
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     display: none;
   }
 }
@@ -75,7 +89,7 @@
   color: black;
   border: 1px solid #000000;
 
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     display: none;
   }
 }
@@ -98,7 +112,11 @@
   color: black;
   width: 100%;
 
-  @media (max-width: 450px) {
+  @media (max-width: 1280px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 500px) {
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -114,7 +132,7 @@
   border: 1px solid #fff;
   background-color: transparent;
   
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     display: none;
   }
 }
