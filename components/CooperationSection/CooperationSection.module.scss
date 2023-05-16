@@ -14,7 +14,13 @@
 
 .info {
   display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 0.6fr 1fr;
   gap: 11.375rem;
+
+  img {
+    width: 100%;
+  }
 
   @media (max-width: 1280px) {
     display: flex;

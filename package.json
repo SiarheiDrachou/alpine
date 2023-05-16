@@ -13,6 +13,7 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.27.2",
+    "framer-motion": "^10.12.12",
     "next": "12.2.5",
     "next-sass": "^1.0.3",
     "react": "18.2.0",

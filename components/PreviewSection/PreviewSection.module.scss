@@ -1,6 +1,6 @@
 .preview {
   background-image: url("../../assets/img/background.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   padding: 9.0625rem 3rem 4.6875rem 2.5rem;
@@ -13,7 +13,7 @@
     border-radius: 0;
   }
 
-  @media(max-width: 500px) {
+  @media(max-width: 768px) {
     min-height: 56rem;
   }
 }
@@ -52,7 +52,7 @@
     top: 11.6875rem;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     top: 27.6875rem;
   }
 }
