@@ -1,10 +1,11 @@
 import { Arrow, LinkArrow, Logo } from "@assets/svg";
 import classes from "./Footer.module.scss";
+import { Container } from "@components/Container";
 
 export default function Footer(): JSX.Element {
   return (
     <footer className={classes.footer}>
-      <div className={classes.container}>
+      <Container className={classes.container}>
         <Logo />
         <div className={classes.grid}>
           <div className={classes.info}>
@@ -50,13 +51,13 @@ export default function Footer(): JSX.Element {
             </a>
           </div>
         </div>
-      </div>
-      <div className={classes.copyright}>
+      </Container>
+      <Container className={classes.copyright}>
         <p className={classes.text}>{"alpine.studio © 2023"}</p>
         <p className={classes.text}>
           {"Все права защищены 🞄 Политика конфиденциальности"}
         </p>
-      </div>
+      </Container>
     </footer>
   );
 }

@@ -1,5 +1,6 @@
 import { TextGallery } from "@components/TextGallery";
 import classes from "./CooperationSection.module.scss";
+import { Container } from "@components/Container";
 
 export default function CooperationSection(): JSX.Element {
   const texts = [
@@ -46,7 +47,7 @@ export default function CooperationSection(): JSX.Element {
   ]
   return (
     <section className={classes.cooperation}>
-      <div className={classes.container}>
+      <Container className={classes.container}>
         <h3 className={classes.title}>{"Давайте сотрудничать"}</h3>
 
         <p className={classes.subTitle}>
@@ -60,7 +61,7 @@ export default function CooperationSection(): JSX.Element {
           <img src="/img/designer1.png" alt="" />
           <TextGallery texts={texts} />
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

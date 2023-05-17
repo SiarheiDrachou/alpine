@@ -1,13 +1,14 @@
 import { CloseIcon, LinkArrow, Logo, Menu } from "@assets/svg";
 import classes from "./Header.module.scss";
 import { useState } from "react";
+import { Container } from "@components/Container";
 
 export default function Header(): JSX.Element {
   const [isVisibleMenu, setIsVisibleMenu] = useState(false);
 
   return (
     <header className={classes.header}>
-      <div className={classes.container}>
+      <Container className={classes.container}>
         <Logo className="" />
 
         <menu className={isVisibleMenu ? classes.menuActive : classes.menu}>
@@ -63,7 +64,7 @@ export default function Header(): JSX.Element {
             </div>
           )}
         </menu>
-      </div>
+      </Container>
     </header>
   );
 }

@@ -1,3 +1,4 @@
+import { Container } from "@components/Container";
 import classes from "./ProjectSection.module.scss";
 import { Gallery } from "@components/Gallery";
 
@@ -62,7 +63,7 @@ export default function ProjectSection(): JSX.Element {
 
   return (
     <section className={classes.project}>
-      <div className={classes.container}>
+      <Container className={classes.container}>
         <h3 className={classes.heading}>{"Проекты, которыми мы гордимся"}</h3>
         <Gallery gallery={gallery} />
 
@@ -70,7 +71,7 @@ export default function ProjectSection(): JSX.Element {
           {`Мы делаем не только узкие задачи по дизайну и разработке  💻 , но и 
           в  🪄 дальнейшем занимаемся   продвижением  💡  и налаживанием бизнес-процессов в компании.`}
         </article>
-      </div>
+      </Container>
     </section>
   );
 }
