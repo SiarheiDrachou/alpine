@@ -1,14 +1,19 @@
 import { CloseIcon, LinkArrow, Logo, Menu } from "@assets/svg";
 import classes from "./Header.module.scss";
 import { useState } from "react";
-import { Container } from "@components/Container";
+import { motion } from "framer-motion";
 
 export default function Header(): JSX.Element {
   const [isVisibleMenu, setIsVisibleMenu] = useState(false);
 
   return (
     <header className={classes.header}>
-      <Container className={classes.container}>
+      <motion.div
+        className={classes.container}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 3, duration: 0.5 }}
+      >
         <Logo className="" />
 
         <menu className={isVisibleMenu ? classes.menuActive : classes.menu}>
@@ -64,7 +69,7 @@ export default function Header(): JSX.Element {
             </div>
           )}
         </menu>
-      </Container>
+      </motion.div>
     </header>
   );
 }

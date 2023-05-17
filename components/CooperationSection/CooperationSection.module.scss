@@ -28,6 +28,17 @@
   }
 }
 
+.infoActive {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-auto-flow: row;
+
+  @media (max-width: 1280px) {
+    padding: 0 0.625rem 4rem;
+    grid-gap: 2rem;
+  }
+}
+
 .title {
   font-size: 10.5rem;
   line-height: 12.625rem;
@@ -79,4 +90,17 @@
   span {
     color: #AB2EBF;
   }
+}
+
+.arrowLeft {
+  transform: rotate(180deg);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 14.5625rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }

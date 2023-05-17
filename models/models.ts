@@ -18,10 +18,28 @@ export type GalleryData = {
 export type TextData = {
   title: string;
   description: string;
+  timeRange?: string | null;
+  price?: string | null;
   style: {
     gridColumnStart?: string;
     gridColumnEnd?: string;
     gridColumn?: string;
     fontSize?: string;
-  }
+  },
+  backgroundImage: string
+  cards: CardData[]
+};
+
+export type CardData = {
+  title: string;
+  description: string;
+  timeRange: string;
+  price: string;
+  style: {
+    gridColumnStart?: string;
+    gridColumnEnd?: string;
+    gridColumn?: string;
+    fontSize?: string;
+  },
+  backgroundImage: string
 };

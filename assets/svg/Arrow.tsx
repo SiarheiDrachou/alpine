@@ -1,5 +1,5 @@
-export default function Arrow(props: { className?: string }): JSX.Element {
-  const { className = "" } = props || {};
+export default function Arrow(props: { className?: string, color?: string }): JSX.Element {
+  const { className = "", color = 'white' } = props || {};
   return (
     <svg
       width="17"
@@ -11,7 +11,7 @@ export default function Arrow(props: { className?: string }): JSX.Element {
     >
       <path
         d="M11.4283 1.42529L15.9997 5.99901L11.4283 10.5716M1.14258 6.00015H15.9997"
-        stroke="white"
+        stroke={color}
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
