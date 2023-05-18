@@ -1,37 +1,62 @@
 import { useCallback, useEffect } from "react";
-import { ArrowRight } from "@assets/svg";
+import { ArrowRight, Logo } from "@assets/svg";
 import { motion, useAnimation } from "framer-motion";
 import classes from "./PreviewSection.module.scss";
 
 export default function PreviewSection(): JSX.Element {
-  const controls = useAnimation();
+  const imageControls = useAnimation();
+  const logocontrols = useAnimation();
 
+  const animateLogo = useCallback(async () => {
+    await logocontrols.start({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1 },
+    });
+    await logocontrols.start({
+      y: "-100%",
+      transition: { duration: 0.3 },
+    });
+    await logocontrols.start({
+      opacity: 0,
+      transition: { duration: 0 },
+    });
+  }, []);
+  
   const animateImage = useCallback(async () => {
-    await controls.start({
+    await imageControls.start({
+      backgroundImage: 'url("/img/background.png")',
       backgroundSize: "300% 300%",
-      transition: { duration: 1 },
+      transition: { delay: 2, duration: 1 },
     });
-    await controls.start({
+    await imageControls.start({
       backgroundSize: "200% 200%",
+      backgroundImage: 'url("/img/background.png")',
       transition: { duration: 1 },
     });
-    await controls.start({
+    await imageControls.start({
       backgroundSize: "100% 100%",
+      backgroundImage: 'url("/img/background.png")',
       transition: { duration: 1 },
     });
   }, []);
 
   useEffect(() => {
+    animateLogo();
     animateImage();
   }, []);
 
   return (
-    <motion.section className={classes.preview} animate={controls}>
+    <motion.section
+      className={classes.preview}
+      animate={imageControls}
+      transition={{ delay: 2 }}
+    >
       <motion.div
         className={classes.container}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 3, duration: 0.5 }}
+        transition={{ delay: 4, duration: 0.5 }}
       >
         <div className={classes.designer}>
           <h1 className={classes.heading}>
@@ -72,6 +97,13 @@ export default function PreviewSection(): JSX.Element {
             <span>{"наш опыт работы в разработке и digital"}</span>
           </p>
         </div>
+      </motion.div>
+      <motion.div
+        className={classes.firstAnimation}
+        animate={logocontrols}
+        transition={{ duration: 1 }}
+      >
+        <Logo />
       </motion.div>
     </motion.section>
   );
