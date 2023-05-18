@@ -10,24 +10,24 @@ export default function PreviewSection(): JSX.Element {
   const animateLogo = useCallback(async () => {
     await logocontrols.start({
       opacity: 1,
-      y: 0,
+      backgroundColor: 'rgba(0, 0, 0, 0.8)',
       transition: { duration: 1 },
     });
     await logocontrols.start({
-      y: "-100%",
-      transition: { duration: 0.3 },
+      opacity: 1,
+      transition: { duration: 1 },
     });
     await logocontrols.start({
       opacity: 0,
-      transition: { duration: 0 },
+      transition: { delay: 1, duration: 0.5 },
     });
   }, []);
-  
+
   const animateImage = useCallback(async () => {
     await imageControls.start({
       backgroundImage: 'url("/img/background.png")',
       backgroundSize: "300% 300%",
-      transition: { delay: 2, duration: 1 },
+      transition: { delay: 1, duration: 1 },
     });
     await imageControls.start({
       backgroundSize: "200% 200%",
