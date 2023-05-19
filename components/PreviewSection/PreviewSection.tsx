@@ -19,6 +19,7 @@ export default function PreviewSection(): JSX.Element {
     });
     await logocontrols.start({
       opacity: 0,
+      visibility: 'hidden',
       transition: { delay: 1, duration: 0.5 },
     });
   }, []);

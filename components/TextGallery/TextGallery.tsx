@@ -7,7 +7,7 @@ import classes from "./TextGallery.module.scss";
 
 export default function TextGallery(props: {
   texts: CardData[] | TextData[];
-  setClickedItem: (item: TextData) => void;
+  setClickedItem: (item: any) => void;
   clickedItem: TextData | null;
 }): JSX.Element {
   const { texts, setClickedItem, clickedItem } = props || {};

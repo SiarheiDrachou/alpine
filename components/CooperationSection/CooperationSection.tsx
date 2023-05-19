@@ -349,7 +349,7 @@ export default function CooperationSection(): JSX.Element {
     },
   ];
 
-  const [clickedItem, setClickedItem] = useState<TextData | null>(null);
+  const [clickedItem, setClickedItem] = useState<any>(null);
 
   return (
     <section className={classes.cooperation}>
